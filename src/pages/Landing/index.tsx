@@ -10,11 +10,13 @@ import './styles.css';
 
 const Landing = () => {
     return (
-        <div className="page-landing">
+        <div id="page-landing">
             <div id="page-landing-content" className="container">
-                <img src={logo} alt="Proffy Logo"/>
-                <h2>Teach or study, make your choice!</h2>
 
+                <div className="logo-container">
+                    <img src={logo} alt="Proffy Logo"/>
+                    <h2>Teach or study, make your choice!</h2>
+                </div>                
                 
                 <img src={landing} alt="Landing Hero" className="hero-image"/>
 
@@ -23,8 +25,8 @@ const Landing = () => {
                         <img src={studyIcon} alt="Study"/>
                         Study
                     </a>
-                    <a href="" className="study">
-                        <img src={giveClassesIcon} alt="Study"/>
+                    <a href="" className="give-classes">
+                        <img src={giveClassesIcon} alt="Give Classes"/>
                         Give Classes
                     </a>
                 </div>
