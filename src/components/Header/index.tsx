@@ -6,8 +6,12 @@ import goBackIcon from '../../assets/images/icons/back.svg'
 
 import './styles.css';
 
-const Header = () => {
-    return(
+interface HeaderProps {
+    title: string;
+}
+
+const Header: React.FC<HeaderProps> = (props) => {
+    return (
         <header className="page-header">
             <div className="top-bar-container">
                 <Link to="/">
@@ -18,7 +22,9 @@ const Header = () => {
             </div>
 
             <div className="header-content">
-                <strong>Look at those amazing Proffys available!</strong>
+                <strong>{props.title}</strong>
+                
+                {props.children}
             </div>
 
         </header>

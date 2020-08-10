@@ -7,7 +7,7 @@ import './styles.css';
 const TeacherForm = () => {
     return (
         <div id="page-teacher-form" className="container">
-            <Header/>
+            <Header title="This is AMAZING that you want to give classes" />
         </div>
     )
 }
