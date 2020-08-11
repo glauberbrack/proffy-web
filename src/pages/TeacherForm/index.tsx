@@ -1,4 +1,5 @@
 import React, { useState, useEffect, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Header from '../../components/Header';
 import Input from '../../components/Input';
@@ -11,6 +12,8 @@ import './styles.css';
 import api from '../../services/api';
 
 const TeacherForm = () => {
+    const history = useHistory();
+
     const [name, setName] = useState('');
     const [avatar, setAvatar] = useState('');
     const [whatsapp, setWhatsapp] = useState('');
@@ -55,6 +58,7 @@ const TeacherForm = () => {
             schedule: scheduleItems
         }).then(() => {
             alert('Everything went just perfect!');
+            history.push('/')
         }).catch(() => {
             alert('Something went wrong');
         })
@@ -128,7 +132,7 @@ const TeacherForm = () => {
                                             ]}
                                         />
 
-                                        <Input type="time" name="from" label="From" value={scheduleItem.from} onChange={(e) => setScheduleItemValue(index, 'from', e.target.value)}/>
+                                        <Input  type="time" name="from" label="From" value={scheduleItem.from} onChange={(e) => setScheduleItemValue(index, 'from', e.target.value)}/>
                                         <Input type="time" name="to" label="To" value={scheduleItem.to} onChange={(e) => setScheduleItemValue(index, 'to', e.target.value)}/>
 
                                     </div>
