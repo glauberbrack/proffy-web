@@ -3,7 +3,7 @@
     <img alt="proffy" title="#proffy" src=".github/logo.svg" width="250px" />
 </h1>
 
-<img alt="proffy" title="#proffy" src=".github/app.png" width="720px" />
+<img alt="proffy" title="#proffy" src=".github/web.png" width="720px" />
 
 <h4 align="center">
   Proffy
@@ -24,6 +24,9 @@
 ## :rocket: Techs
 
 - [Typescript](https://www.typescriptlang.org/)
+- [ReactJS](https://reactjs.org/)
+- [React-Router-Dom](https://reactrouter.com/web/guides/quick-start)
+- [Axios](https://github.com/axios/axios)
 
 
 ## :notebook: Running
@@ -32,10 +35,10 @@
 
 ```bash
 # Clone this
-$ git clone https://github.com/glauberbrack/proffy-app
+$ git clone https://github.com/glauberbrack/proffy-web
 
 # Go to your project folder
-$ cd proffy-app
+$ cd proffy-web
 
 # Install all depencies
 $ yarn install
