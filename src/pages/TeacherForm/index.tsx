@@ -45,7 +45,36 @@ const TeacherForm = () => {
                     ]}
                     />
                     <Input name="price" label="Price per hour" />
+                    
+                </fieldset>
 
+                <fieldset>
+                    <legend>
+                        Available Times
+                        <button type="button">
+                            + New Time
+                        </button>
+                    </legend>
+
+                    <div className="schedule-item">
+                        <Select
+                            name="week_day"
+                            label="Week Day"
+                            options={[
+                                {value: '0', label: 'Sunday'},
+                                {value: '1', label: 'Monday'},
+                                {value: '2', label: 'Tuesday'},
+                                {value: '3', label: 'Wednesday'},
+                                {value: '4', label: 'Thursday'},
+                                {value: '5', label: 'Friday'},
+                                {value: '6', label: 'Saturday'},
+                            ]}
+                        />
+
+                        <Input type="time" name="from" label="From"/>
+                        <Input type="time" name="to" label="To"/>
+
+                    </div>                    
                 </fieldset>
 
                 <footer>
