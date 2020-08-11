@@ -2,6 +2,7 @@ import React from 'react';
 
 import Header from '../../components/Header';
 import Input from '../../components/Input';
+import Textarea from '../../components/Textarea';
 
 import warningIcon from '../../assets/images/icons/warning.svg';
 
@@ -30,6 +31,7 @@ const TeacherForm = () => {
 
                     <Input name="subject" label="Subject" />
                     <Input name="price" label="Price per hour" />
+                    <Textarea name="bio" label="Bio"/>
 
                 </fieldset>
 
