@@ -31,7 +31,19 @@ const TeacherForm = () => {
                 <fieldset>
                     <legend>About the Class</legend>
 
-                    <Select name="subject" label="Subject" />
+                    <Select
+                    name="subject"
+                    label="Subject"
+                    options={[
+                        {value: 'Arts', label: 'Arts'},
+                        {value: 'Biology', label: 'Biology'},
+                        {value: 'Sciences', label: 'Sciences'},
+                        {value: 'Physical Education', label: 'Physical Education'},
+                        {value: 'Physics', label: 'Physics'},
+                        {value: 'Chemistry', label: 'Chemistry'},
+                        {value: 'Portuguese', label: 'Portuguese'},
+                    ]}
+                    />
                     <Input name="price" label="Price per hour" />
 
                 </fieldset>
