@@ -33,7 +33,6 @@ const TeacherItem = () => {
             </footer>
         </article>
     )
-
 }
 
 export default TeacherItem;
