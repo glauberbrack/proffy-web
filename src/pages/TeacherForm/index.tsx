@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
+import Select from '../../components/Select';
 
 import warningIcon from '../../assets/images/icons/warning.svg';
 
@@ -23,15 +24,15 @@ const TeacherForm = () => {
                     <Input name="name" label="Fullname" />
                     <Input name="avatar" label="Avatar" />
                     <Input name="whatsapp" label="WhatsApp" />
+                    <Textarea name="bio" label="Bio"/>
 
                 </fieldset>
 
                 <fieldset>
                     <legend>About the Class</legend>
 
-                    <Input name="subject" label="Subject" />
+                    <Select name="subject" label="Subject" />
                     <Input name="price" label="Price per hour" />
-                    <Textarea name="bio" label="Bio"/>
 
                 </fieldset>
 
