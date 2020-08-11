@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = (props) => {
         <header className="page-header">
             <div className="top-bar-container">
                 <Link to="/">
-                    <img src={goBackIcon} alt="Go Bach"/>
+                    <img src={goBackIcon} alt="Go Back"/>
                 </Link>
 
                 <img src={logo} alt="Proffy Logo"/>
