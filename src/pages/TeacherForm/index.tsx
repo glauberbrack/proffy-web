@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from '../../components/Header';
 import Input from '../../components/Input';
@@ -10,6 +10,17 @@ import warningIcon from '../../assets/images/icons/warning.svg';
 import './styles.css';
 
 const TeacherForm = () => {
+    const [scheduleItems, setScheduleItems] = useState([
+        { week_day: 0, from: '', to: '' }
+    ]);
+
+    function handleAddNewScheduleItem() {
+        setScheduleItems([
+            ...scheduleItems,
+            { week_day: 0, from: '', to: '' }
+        ])
+    }
+
     return (
         <div id="page-teacher-form" className="container">
             <Header
@@ -51,30 +62,33 @@ const TeacherForm = () => {
                 <fieldset>
                     <legend>
                         Available Times
-                        <button type="button">
+                        <button type="button" onClick={handleAddNewScheduleItem}>
                             + New Time
                         </button>
                     </legend>
+                        {scheduleItems.map(scheduleItem => {
+                            return (
+                                <div key={scheduleItem.week_day} className="schedule-item">
+                                    <Select
+                                        name="week_day"
+                                        label="Week Day"
+                                        options={[
+                                            {value: '0', label: 'Sunday'},
+                                            {value: '1', label: 'Monday'},
+                                            {value: '2', label: 'Tuesday'},
+                                            {value: '3', label: 'Wednesday'},
+                                            {value: '4', label: 'Thursday'},
+                                            {value: '5', label: 'Friday'},
+                                            {value: '6', label: 'Saturday'},
+                                        ]}
+                                    />
 
-                    <div className="schedule-item">
-                        <Select
-                            name="week_day"
-                            label="Week Day"
-                            options={[
-                                {value: '0', label: 'Sunday'},
-                                {value: '1', label: 'Monday'},
-                                {value: '2', label: 'Tuesday'},
-                                {value: '3', label: 'Wednesday'},
-                                {value: '4', label: 'Thursday'},
-                                {value: '5', label: 'Friday'},
-                                {value: '6', label: 'Saturday'},
-                            ]}
-                        />
+                                    <Input type="time" name="from" label="From"/>
+                                    <Input type="time" name="to" label="To"/>
 
-                        <Input type="time" name="from" label="From"/>
-                        <Input type="time" name="to" label="To"/>
-
-                    </div>                    
+                                </div>
+                            )
+                        })}                    
                 </fieldset>
 
                 <footer>
@@ -82,7 +96,7 @@ const TeacherForm = () => {
                     <p>
                         <img src={warningIcon} alt="Important Warning"/>
                         Important! <br/>
-                        Fill all teh fields
+                        Fill all the fields
                     </p>
 
                     <button type="button">
