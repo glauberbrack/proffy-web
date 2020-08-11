@@ -3,7 +3,7 @@
     <img alt="proffy" title="#proffy" src=".github/logo.svg" width="250px" />
 </h1>
 
-<img alt="proffy" title="#proffy" src=".github/web.png" width="720px" />
+<img alt="proffy" title="#proffy" src=".github/web.png" width="550px" />
 
 <h4 align="center">
   Proffy
