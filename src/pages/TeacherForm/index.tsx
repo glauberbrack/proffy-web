@@ -1,6 +1,9 @@
 import React from 'react';
 
 import Header from '../../components/Header';
+import Input from '../../components/Input';
+
+import warningIcon from '../../assets/images/icons/warning.svg';
 
 import './styles.css';
 
@@ -16,22 +19,33 @@ const TeacherForm = () => {
                 <fieldset>
                     <legend>Your data</legend>
 
-                    <div className="input-block">
-                        <label htmlFor="name">Fullname</label>
-                        <input type="text" id="name"/>
-                    </div>
-
-                    <div className="input-block">
-                        <label htmlFor="avatar">Avatar</label>
-                        <input type="text" id="name"/>
-                    </div>
-
-                    <div className="input-block">
-                        <label htmlFor="whatsapp">Whatsapp</label>
-                        <input type="text" id="name"/>
-                    </div>
+                    <Input name="name" label="Fullname" />
+                    <Input name="avatar" label="Avatar" />
+                    <Input name="whatsapp" label="WhatsApp" />
 
                 </fieldset>
+
+                <fieldset>
+                    <legend>About the Class</legend>
+
+                    <Input name="subject" label="Subject" />
+                    <Input name="price" label="Price per hour" />
+
+                </fieldset>
+
+                <footer>
+
+                    <p>
+                        <img src={warningIcon} alt="Important Warning"/>
+                        Important! <br/>
+                        Fill all teh fields
+                    </p>
+
+                    <button type="button">
+                        Save
+                    </button>
+
+                </footer>
             </main>
         </div>
     )
